@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261119/AARenor/news_image_20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 [![reward](https://make.fun/badge/news-image-20261119/AARenor/news_image_20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
-A square front page sums up Thursday 19 November 2026, led by the first Trump, Xi and Putin meeting in Shenzhen, with stories from Asia, the Middle East, Europe, Africa and the Americas. Editorial illustrations were composed in HTML with Roboto Condensed and Lato, then exported as one JPEG.
+A square front page sums up Thursday 19 November 2026 in 48 stories across 6 regions, led by the first Trump, Xi and Putin meeting in Shenzhen. Editorial illustrations were composed in HTML with Roboto Condensed and Lato, then exported as one JPEG.
 
 ## Run it
 
