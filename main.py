@@ -3,6 +3,16 @@
 import os
 import shutil
 
+def image_kind(path):
+    """Return jpeg, png, or None from the file header."""
+    with open(path, "rb") as handle:
+        head = handle.read(8)
+    if head.startswith(b"\xff\xd8"):
+        return "jpeg"
+    if head.startswith(b"\x89PNG\r\n\x1a\n"):
+        return "png"
+    return None
+
 src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entry.png")
 dest_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 if not os.path.isfile(src):
@@ -10,5 +20,9 @@ if not os.path.isfile(src):
 size = os.path.getsize(src)
 if size > 1048576:
     raise SystemExit(f"error: source image is {size} bytes, larger than 1048576")
+if size == 0:
+    raise SystemExit(f"error: source image is empty: {src}")
+if image_kind(src) is None:
+    raise SystemExit(f"error: source image is not a PNG or JPEG: {src}")
 os.makedirs(dest_dir, exist_ok=True)
 shutil.copyfile(src, os.path.join(dest_dir, "entry.png"))
